@@ -3,7 +3,7 @@ version: 0.2
 phases:
   build:
     commands:
-      - aws deploy push --application-name XXX --s3-location s3://XXX/artifact.zip --source src
+      - aws deploy push --application-name OLCAWS_05_02_app --s3-location s3://olcaws-work-05-02artifact-bucket/artifact.zip --source src
 artifacts:
   files:
     - '**/*'
