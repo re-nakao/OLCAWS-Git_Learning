@@ -3,3 +3,9 @@ os: linux
 files:
   - source: index.html
     destination: /var/www/html/
+
+hooks:
+  AfterInstall:
+    - location: scripts/restart_apache.sh
+      timeout: 60
+      runas: root
