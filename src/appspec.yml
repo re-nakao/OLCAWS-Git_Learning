@@ -1,11 +1,12 @@
-version: 0.0
-os: linux
-files:
-  - source: src/index.html
-    destination: /var/www/html/
+version: 0.2
 
-hooks:
-  AfterInstall:
-    - location: scripts/restart_apache.sh
-      timeout: 60
-      runas: root
+phases:
+build:
+commands:
+- cp src/index.html .
+- cp appspec.yml .
+- zip artifact.zip index.html appspec.yml
+
+artifacts:
+files:
+- artifact.zip
