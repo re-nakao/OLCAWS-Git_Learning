@@ -1,12 +1,5 @@
-version: 0.2
-
-phases:
-build:
-commands:
-- cp src/index.html .
-- cp appspec.yml .
-- zip artifact.zip index.html appspec.yml
-
-artifacts:
+version: 0.0
+os: linux
 files:
-- artifact.zip
+  - source: index.html
+    destination: /var/www/html/

@@ -3,8 +3,9 @@ version: 0.2
 phases:
   build:
     commands:
-      - echo "Zipping source files..."
-      - zip -r artifact.zip src/
+      - cp src/index.html .
+      - cp src/appspec.yml .
+      - zip artifact.zip index.html appspec.yml
 
 artifacts:
   files:
