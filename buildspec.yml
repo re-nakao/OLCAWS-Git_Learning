@@ -3,10 +3,8 @@ version: 0.2
 phases:
   build:
     commands:
-      - cp src/index.html .
-      - cp src/appspec.yml .
-      - zip artifact.zip index.html appspec.yml
-
+      - zip -r artifact.zip .
 artifacts:
   files:
     - artifact.zip
+  base-directory: src
