@@ -3,8 +3,8 @@ version: 0.2
 phases:
   build:
     commands:
-      - zip -r artifact.zip .
+      - cd src
+      - zip -r ../artifact.zip .
 artifacts:
   files:
     - artifact.zip
-  base-directory: src
