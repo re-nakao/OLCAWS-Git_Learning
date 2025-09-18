@@ -3,8 +3,9 @@ version: 0.2
 phases:
   build:
     commands:
+      - echo "Zipping source files..."
       - cd src
-      - zip -r ../artifact.zip .
+      - zip -r ../artifact.zip . ../appspec.yml
 artifacts:
   files:
     - artifact.zip

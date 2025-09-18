@@ -1,5 +1,0 @@
-version: 0.0
-os: linux
-files:
-  - source: src/index.html
-    destination: /var/www/html/
