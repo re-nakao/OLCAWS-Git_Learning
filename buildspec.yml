@@ -1,9 +1,6 @@
-version: 0.2
-
 phases:
   build:
     commands:
-      - echo "Creating artifact.zip"
       - zip -r artifact.zip src/*
 artifacts:
   files:
