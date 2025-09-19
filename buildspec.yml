@@ -3,8 +3,8 @@ version: 0.2
 phases:
   build:
     commands:
-      - echo "Creating artifact.zip"
-      - zip -r artifact.zip src/*
+      - cp src/appspec.yml .
+      - zip -r artifact.zip src/* appspec.yml
 
 artifacts:
   files:
