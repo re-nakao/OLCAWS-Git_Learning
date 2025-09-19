@@ -1,11 +1,17 @@
 version: 0.2
 
 phases:
+  install:
+    runtime-versions:
+      python: 3.9   # 任意。zip作成にPython不要なら不要
+  pre_build:
+    commands:
+      - echo "Start build phase"
   build:
     commands:
-      - echo "Zipping source files..."
-      - cd src
-      - zip -r ../artifact.zip . ../appspec.yml
+      - echo "Creating artifact.zip"
+      - zip -r artifact.zip src/*
 artifacts:
   files:
     - artifact.zip
+  discard-paths: yes
