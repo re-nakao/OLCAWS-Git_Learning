@@ -3,14 +3,9 @@ version: 0.2
 phases:
   build:
     commands:
-      - echo "Build step completed"
+      - echo "Build step "
 
 artifacts:
   files:
     - index.html
-  base-directory: src
-  secondary-artifacts:
-    appspec:
-      files:
-        - ../appspec.yml
-      base-directory: .
+    - appspec.yml
