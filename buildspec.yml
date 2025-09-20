@@ -3,9 +3,10 @@ version: 0.2
 phases:
   build:
     commands:
-      - zip -r artifact.zip index.html appspec.yml
+      - echo "Creating artifact.zip with appspec.yml and index.html"
+      - zip -r artifact.zip appspec.yml index.html
 
 artifacts:
   files:
     - artifact.zip
-  discard-paths: yes
+  discard-paths: no   # ← ここを no にする修正
