@@ -3,10 +3,9 @@ version: 0.2
 phases:
   build:
     commands:
-      - echo "Creating artifact.zip with appspec.yml and index.html"
-      - zip -r artifact.zip appspec.yml index.html
+      - echo "Build step (no manual zip needed)"
 
 artifacts:
   files:
-    - artifact.zip
-  discard-paths: no   # ← ここを no にする修正
+    - index.html
+    - appspec.yml
